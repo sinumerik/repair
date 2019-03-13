@@ -1,0 +1,131 @@
+.price
+    &__title
+        width: 515px
+        margin-top: 86px
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 48px
+        line-height: 45px
+    &__subtitle
+        text-align: center
+        margin-bottom: 59px
+        margin-left: 1px
+        +thin
+.cards
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__img
+        display: block
+    &__image
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%)
+            opacity: 0
+            transition: 0.3s
+    &__card
+        padding-bottom: 44px
+        margin-bottom: 30px
+        text-align: center
+        border: 1px solid $border-card
+        transition: 0.3s
+        &:hover
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
+            .cards__image:before
+                opacity: 1
+    &__price-name
+        margin-top: 36px
+        margin-left: 7px
+        margin-bottom: 27px
+        font-size: 18px
+        +light
+    &__link
+        display: inline-block
+        margin-left: 3px
+        font-size: 16px
+        +bold
+        text-decoration: none
+        position: relative
+        &:hover
+            &:after
+                height: 12px
+                z-index: -1
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            margin-bottom: -4px
+            width: 100%
+            height: 3px
+            background-color: $main-color
+            transition: 0.3s
+@media (max-width: 1200px)
+    .cards
+        padding-left: 65px
+        padding-right: 65px
+@media (max-width: 960px)
+    .cards
+        &__card
+            width: 320px
+            margin-left: auto
+            margin-right: auto
+@media (max-width: 768px) and (min-width: 551px)
+    .price
+        &__title
+            font-size: 20px
+            margin-top: 25px
+            margin-bottom: 20px
+            line-height: normal
+        &__subtitle
+            font-size: 17px
+            margin-bottom: 22px
+    .cards
+        &__card
+            margin-left: auto
+            margin-right: auto
+        &__image
+            width: 100%
+
+@media (min-width: 320px) and (max-width: 550px)
+    .price
+        &__title
+            width: 280px
+            font-size: 18px
+            +bold
+            margin-top: 49px
+            line-height: normal
+            padding-right: 6px
+            margin-bottom: 22px
+        &__subtitle
+            margin-top: 0
+            margin-bottom: 60px
+            font-size: 14px
+            padding-top: 1px
+            padding-right: 22px
+    .cards
+        width: 282px
+        padding-right: 11px
+        margin-left: auto
+        margin-right: auto
+        padding-left: 0
+        &__card
+            margin-bottom: 30px
+            margin-left: 4px
+            margin-right: auto
+            padding-bottom: 32px
+        &__image
+            width: 271px
+        &__price-name
+            font-size: 14px
+            margin-top: 29px
+            margin-bottom: 11px
+        &__link
+        &__text
+            padding-right: 7px

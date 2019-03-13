@@ -1,0 +1,143 @@
+.hero
+    background-color: $secondary
+    &-block
+        display: flex
+        justify-content: space-between
+        padding-top: 37px
+        padding-bottom: 52px
+    &-text
+        flex-basis: 41%
+        &__title
+            text-align: left
+            color: $text-color
+            font-size: 41px
+            line-height: 55px
+            margin-top: 27px
+            margin-bottom: 36px
+            margin-left: -4px
+        &__subtitle
+            font-size: 20px
+            margin-bottom: 77px
+        &__list
+            display: flex
+            flex-direction: column
+            padding-left: 0
+            margin-top: 0
+            margin-bottom: 0
+            &-item
+                width: 270px
+                margin-left: 70px
+        &__item
+            display: flex
+            align-items: center
+            font-size: 14px
+            line-height: 24px
+            margin-bottom: 34px
+        &__item:nth-child(2)
+            margin-bottom: 21px
+        &__item:before
+            content: " "
+            position: absolute
+            display: inline-block
+            width: 35px
+            height: 35px
+            border: 2px solid $main-color
+            border-radius: 50%
+        &__item-clock:before
+            background: url("../img/hero/clock.png") no-repeat center center
+        &__item-calculator:before
+            background: url("../img/hero/calculator.png") no-repeat center center
+        &__item-paint-board:before
+            background: url("../img/hero/paint-board.png") no-repeat center center
+
+@media (max-width: 1200px)
+    .hero
+        &-block
+            align-items: center
+        &-image
+            padding-left: 40px
+        &-text
+            flex-basis: 65%
+            &__title
+                font-size: 32px
+                margin-bottom: 19px
+            &__subtitle
+                font-size: 18px
+                margin-bottom: 34px
+@media (max-width: 960px)
+    .hero
+        &-block
+            flex-direction: column
+            align-items: center
+        &-text
+            display: flex
+            flex-direction: column
+            align-items: center
+            &__title
+                font-size: 28px
+            &__subtitle
+                font-size: 17px
+        &-image
+            padding-left: 0
+
+@media (max-width: 768px)
+    .hero
+        &-text
+            display: flex
+            flex-direction: column
+            align-items: center
+            &__title
+                text-align: center
+                font-size: 23px
+                line-height: 30px
+            &__subtitle
+                font-size: 16px
+                font-weight: 400
+            &__list-item
+                margin-left: 55px
+        &__item
+            font-size: 12px
+            margin-bottom: 15px
+        &__item:nth-child(3)
+            margin-bottom: 0
+@media (min-width: 320px) and (max-width: 576px)
+    .hero
+        &-block
+            margin: auto
+            padding-top: 46px
+        &-text
+            justify-content: flex-end
+            align-items: flex-start
+            &__title
+                max-width: 292px
+                text-align: left
+                font-family: 'Museo Sans Bold', sans-serif
+                font-size: 24px
+                margin-top: 0
+                margin-bottom: 5px
+                padding-left: 7px
+            &__subtitle
+                width: 210px
+                font-family: 'Museo Sans Bold', sans-serif
+                font-size: 16px
+                margin-top: 0
+                margin-bottom: 26px
+                padding-left: 5px
+            &__list
+                width: 270px
+                padding-top: 15px
+                padding-left: 6px
+            &__item
+                font-family: 'Museo Sans Light', sans-serif
+                font-size: 12px
+                line-height: 1.4
+                margin-bottom: 28px
+            &__item:nth-child(2)
+                margin-top: 9px
+                margin-bottom: 28px
+            &__item:nth-child(3)
+                margin-bottom: 30px
+        &-image
+            margin-top: 10px
+            width: 299px
+            padding-left: 9px

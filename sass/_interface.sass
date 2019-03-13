@@ -1,0 +1,104 @@
+*
+    box-sizing: border-box
+form
+    position: relative
+body
+    padding: 0
+    margin: 0
+    color: $text-color
+    +light
+img
+    max-width: 100%  
+a 
+    text-decoration: none
+    color: $text-color
+    +bold
+.container 
+    width: 1170px
+    margin: auto
+.button
+    border: none
+    border-radius: 10px
+    background-color: $main-color
+    color: $text-color
+    font-size: 13px
+    +bold
+    &:hover
+        background-color: lighten($main-color, 10%)
+        cursor: pointer
+    &:focus
+        outline: none
+.section-title
+    text-align: center
+    font-size: 30px
+    +bold
+.section-subtitle
+    font-size: 20px
+    +bold
+.input
+    border: 1px solid $border-color
+    border-radius: 10px
+    padding-top: 24px
+    padding-right: 26px
+    padding-bottom: 22px
+    padding-left: 26px
+    margin-bottom: 30px
+    font-size: 15px
+    +light
+    &:focus
+        border: 1px solid orange
+.invalid
+        border: 1px solid red
+#phone-error,
+#username-error,
+#email-error
+    position: absolute
+    border: transparent
+    color: red
+    font-size: 12px
+.offer__form div#username-error
+    top: -15px
+    left: 160px
+.offer__form div#phone-error
+    top: -15px
+    right: 9px
+.form__form div#username-error
+    top: 4px
+    right: 8px
+.form__form div#phone-error
+    top: 84px
+    right: 8px
+.form__form div#email-error
+    top: 164px
+    right: 8px
+.arrows
+    &__left, &__right
+        cursor: pointer
+
+@media (max-width: 1200px)
+    .button
+        &:hover
+            background-color: $main-color
+    .input
+        &:focus
+            border: 1px solid $border-color
+    .offer__form div#username-error
+        text-align: right
+        top: -15px
+        font-size: 12px
+        right: 9px
+    .offer__form div#phone-error
+        top: 80px
+        font-size: 12px
+        right: 9px
+@media (max-width: 768px)
+    .form__form div#phone-error
+        top: 76px
+        right: 8px
+    .form__form div#email-error
+        top: 148px
+        right: 8px
+@media (min-width: 320px) and (max-width: 576px)
+    .offer__form div#username-error
+        top: 4px
+    
